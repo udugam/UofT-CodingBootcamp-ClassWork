@@ -1,0 +1,53 @@
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Georgia,Times New Roman,Times,serif";
+  background-color: #efeee7;
+  color: #333333
+}
+
+header {
+    background-color: #333333;
+    color: #eee;
+    font-size: 28px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    font-size: 24px;
+}
+
+.container {
+    width: 1024px;
+    margin: 0 auto
+}
+
+#main-bio {
+    float: left;
+}
+
+#contact-info {
+    float: left;
+}
+
+#bio-image {
+    float: left;
+}
+
+#bio-image {
+    width: 200px;
+}
+
+Be sure to include alt text in all images
+#main-bio should have a width of 70%.
+Add margins to the image so there is distance between it and the bio text.
+#contact-info should have a width of 30%.
+Adjust the line height so it is 1.5 times the size of the font.
+Make the link color #d21034.
+If you forgot how to write the CSS properties, you can reference all CSS properties here https://developer.mozilla.org/en-US/docs/Web/CSS/Reference
+
+-->
