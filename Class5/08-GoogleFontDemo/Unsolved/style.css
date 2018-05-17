@@ -1,0 +1,33 @@
+/**
+ * Google Fonts Demo
+ **/
+
+/* Add in the Google Fonts of your choice */
+h1 {
+    font-family: 'PT Sans Narrow', sans-serif;
+}
+
+h3 {
+    font-family: 'Noto Serif', serif;
+}
+
+h4 {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+p {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+p:active {
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: purple;
+}
+
+a:active {
+    text-transform: uppercase;
+}
+
