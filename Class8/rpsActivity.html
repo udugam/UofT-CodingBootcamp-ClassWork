@@ -1,0 +1,73 @@
+<!-- Pseudo Code for Rock Paper Scissors 
+
+1. Prompt user for choice
+2. User inputs key
+3. Capture user's input value and store in variable
+3. Computer randomly selects between r, p, and s
+4. computer choice needs to be stored in variable
+5. compare user input to computer input
+5a. compare logic
+
+
+if user has r
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please select r, p, or s to play: <span id="user-input">Nothing yet</span></h1>
+    
+    <h2>Computer Selected: <span id="computer-input"></span></h2>
+
+    <h2>Win: <span id="win">0</span></h2>
+    <h2>Loss: <span id="loss">0</span></h2>
+    <h2>Tie: <span id="tie">0</span></h2>
+
+    <script>
+        var choices = ["r", "p", "s"];
+        var wins = 0;
+        var loss = 0;
+        var tie = 0;
+
+        var userInput = document.querySelector("#user-input");
+        var computerInputSpan = document.querySelector("#computer-input");
+        var winSpan = document.querySelector("#win");
+        var tieSpan = document.querySelector("#loss");
+        var lossSpan = document.querySelector("#tie");
+
+        //User Selection
+        document.onkeyup = function(event) {
+            userInput.textContent = event.key;
+
+            //Computer Selection
+            var computerInput = choices[Math.floor(Math.random()*choices.length)];
+            computerInputSpan.textContent = computerInput;
+
+            //Comparisons
+            if(userInput.textContent === "r") {
+                if(computerInput==="r") {
+                    tie++;
+                    tieSpan.textContent = tie;
+                } else if(computerInput==="p") {
+                    loss++;
+                    lossSpan.textContent = loss;
+                } else if(computerInput==="s") {
+                    win++;
+                    winSpan.textContent = win;
+                }  
+            }
+        }
+
+        
+
+
+    </script>
+</body>
+</html>
