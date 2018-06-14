@@ -1,0 +1,15 @@
+1. From Walmart, what product do they sell the most in terms of quantity? Bannanas! They're perishable, cheap, usually at the front of the store.
+
+2. I give you an array of 51 cards. Each card contains two properties: the suit, and the title (a string of either a number or a ranking: king, ace, so on).
+Fifty-two cards form a deck. But I gave you 51. One is missing! How do you find it?
+Try to come up with the most efficient steps to solve this.
+Hint: Using a for loop against an array of values is not the most efficient solution--what if the cards aren't sorted?
+- Create four variables that count the # of suits
+- Create a variable that has the sum of a 52 deck card assigning values to each card from 1-13
+- iterate through the given deck summing the numerical value of each card while incrementing suit variables
+- at the end the difference in the sums is equal to the card that is missing
+- this missing suit is it's suit.
+
+3. Write a script that prints the numbers 1 to 100 in the console. 
+But for multiples of three, print Fizz instead of the number. 
+For multiples of five, print Buzz. For numbers which are multiples of both three and five, print FizzBuzz.
