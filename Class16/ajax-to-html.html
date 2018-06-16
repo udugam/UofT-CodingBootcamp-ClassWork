@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Favorite Movies</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Basic Table</h2>
+    <p>The .table class adds basic styling (light padding and only horizontal dividers) to a table:</p>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Movie Name</th>
+          <th scope="col">Year</th>
+          <th scope="col">Actors</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Insert movie rows here -->
+      </tbody>
+    </table>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript">
+    // The below code fills in the first row of the table
+    var movie = "Seven";
+    var queryURL = "https://www.omdbapi.com/?s=" + movie + "&apikey=trilogy";
+    
+
+    $.ajax({
+      url: queryURL,
+      method: "GET"
+    }).then(function(response) {
+      console.log(response);
+      populateTable(response.Search);
+    });
+
+    function populateTable(array) {
+      array.forEach(function(element) {
+        $("tbody").append("<tr><td>"+element.Title+"</td><td>"+element.Year+"</td><td>"+populateActors(element.imdbID)+"</td></tr>")
+      });
+    }
+
+    function populateActors(id) {
+      var queryActorsURL = "https://www.omdbapi.com/?i=" + id + "&y=&plot=short&apikey=trilogy";
+        $.ajax({
+        url: queryActorsURL,
+        method: "GET"
+      }).then(function(response) {
+        console.log(response.Actors);
+        return response.Actors;
+        });
+    }
+
+  </script>
+</body>
+
+</html>
