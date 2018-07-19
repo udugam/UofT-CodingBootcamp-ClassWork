@@ -19,11 +19,11 @@ if(process.argv[2]==='add') {
     //Formatt of input is ax+b=c thus x=(c-b)/a
     
     var equation = process.argv[3]
-    equation += '&'
+    //equation += '&'
     
     var a = parseInt(equation.substring(0,equation.indexOf('x')))
     var b = parseInt(equation.substring(equation.indexOf('+'),equation.indexOf('=')))
-    var c = parseInt(equation.substring(equation.indexOf('=')+1,equation.length-1))
+    var c = parseInt(equation.substring(equation.indexOf('=')+1,equation.length))
 
-    console.log((c-b)/a);
+    console.log(((c-b)/a));
 }
