@@ -60,7 +60,7 @@ $("#submit-bid").on("click", () => {
     var bidderName = $("#bidder-name").val();
     var bidderPrice = $("#bidder-price").val();
     
- 
+
     // If Then statements to compare against previous high bidder
     if (bidderPrice > highPrice) {
         // Alert that they are High Bidder
