@@ -67,3 +67,5 @@ dog.goInside() = function() {
 var cat = new DigitalPal();
 
 
+
+
