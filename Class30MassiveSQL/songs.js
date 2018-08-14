@@ -50,8 +50,12 @@ function findSongByArtist() {
     ])
     .then(answer => {
         var artist = answer.action
-        
+        connection.query("SELECT * FROM songs", function(err,res) {
+            console.log(res)
+        })
     });
 }
+
+
 
 
